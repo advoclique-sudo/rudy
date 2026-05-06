@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rudy — Diligências Envolvendo o Banco Master</title>
+  <meta name="description" content="Unidade especializada em diligências envolvendo o Banco Master. Execução precisa, relatórios completos e comprometimento total em cada demanda." />
+  <meta name="keywords" content="diligências banco master, correspondente jurídico banco master, protocolos, audiências, penhoras, acompanhamento processual" />
+  <meta property="og:title" content="Rudy — Diligências Banco Master" />
+  <meta property="og:description" content="Unidade operacional especializada em diligências envolvendo o Banco Master. Precisão, agilidade e rastreabilidade total em cada execução." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ==========================================
+       VARIÁVEIS — PALETA AZUL / PRETO / BRANCO
+    ========================================== */
+    :root {
+      --bg:           #060B16;
+      --bg-card:      #0C1526;
+      --bg-card-2:    #101D34;
+      --bg-section:   #08101E;
+      --border:       rgba(42, 108, 220, 0.16);
+      --border-hover: rgba(42, 108, 220, 0.44);
+      --blue:         #1E64DC;
+      --blue-light:   #4B8EFF;
+      --blue-bright:  #3B78FF;
+      --blue-dim:     #0F3A8C;
+      --blue-bg:      rgba(30, 100, 220, 0.07);
+      --white:        #EEF2FF;
+      --white-dim:    #8EA5CC;
+      --white-faint:  #4A5F80;
+      --graphite:     #111B2D;
+      --graphite-2:   #0A1220;
+      --green-wa:     #25D366;
+      --green-wa-h:   #1EAF55;
+      --radius:       3px;
+      --radius-lg:    8px;
+      --transition:   0.27s cubic-bezier(0.4,0,0.2,1);
+      --shadow-blue:  0 8px 40px rgba(30,100,220,0.14);
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'Outfit', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; font-size:16px; }
+    body {
+      background:var(--bg);
+      color:var(--white);
+      font-family:var(--font-body);
+      line-height:1.7;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+    }
+    ::selection { background:rgba(59,120,255,0.28); color:#fff; }
+    img { max-width:100%; display:block; }
+    a { color:inherit; text-decoration:none; }
+
+    /* ==========================================
+       UTILITÁRIOS
+    ========================================== */
+    .container { max-width:1120px; margin:0 auto; padding:0 32px; }
+
+    .section-label {
+      display:inline-flex; align-items:center; gap:10px;
+      font-size:10.5px; font-weight:600;
+      letter-spacing:0.22em; text-transform:uppercase;
+      color:var(--blue-light); margin-bottom:18px;
+    }
+    .section-label::before {
+      content:''; display:block;
+      width:24px; height:1px; background:var(--blue-light);
+    }
+
+    .section-title {
+      font-family:var(--font-display);
+      font-size:clamp(1.9rem,3.8vw,2.75rem);
+      font-weight:500; line-height:1.17;
+      color:var(--white); letter-spacing:-0.01em;
+    }
+    .section-title em { font-style:italic; color:var(--blue-light); }
+
+    .section-sub {
+      font-size:.96rem; color:var(--white-dim);
+      max-width:520px; line-height:1.82; margin-top:14px;
+    }
+
+    .blue-line {
+      display:block; width:44px; height:1.5px;
+      background:linear-gradient(90deg, var(--blue-light), transparent);
+      margin:22px 0;
+    }
+
+    /* ==========================================
+       NAVBAR
+    ========================================== */
+    #navbar {
+      position:fixed; top:0; left:0; right:0;
+      z-index:100; padding:22px 0;
+      transition:background var(--transition), padding var(--transition);
+    }
+    #navbar.scrolled {
+      background:rgba(6,11,22,0.97);
+      backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+      padding:13px 0;
+      box-shadow:0 1px 0 var(--border);
+    }
+    .nav-inner { display:flex; align-items:center; justify-content:center; }
+
+    .nav-logo {
+      display:flex; align-items:center; gap:12px;
+      font-family:var(--font-display);
+      font-size:1.25rem; font-weight:600; letter-spacing:0.06em;
+      color:var(--white); text-transform:uppercase;
+    }
+    .nav-logo-mark {
+      width:30px; height:30px;
+      background:linear-gradient(135deg, #1A5CD4, #4B8EFF);
+      border-radius:6px;
+      display:flex; align-items:center; justify-content:center;
+      font-family:var(--font-display); font-size:.85rem; font-weight:700;
+      color:#fff; letter-spacing:0;
+    }
+
+    .nav-links { display:flex; align-items:center; gap:32px; list-style:none; }
+    .nav-links a {
+      font-size:.77rem; font-weight:500;
+      letter-spacing:.1em; text-transform:uppercase;
+      color:var(--white-dim); transition:color var(--transition);
+    }
+    .nav-links a:hover { color:var(--blue-light); }
+
+    .nav-cta {
+      background:transparent !important;
+      border:1px solid rgba(42,108,220,0.45) !important;
+      color:var(--blue-light) !important;
+      padding:8px 20px; border-radius:var(--radius);
+      transition:background var(--transition), border-color var(--transition) !important;
+    }
+    .nav-cta:hover { background:var(--blue-bg) !important; border-color:var(--blue-light) !important; }
+
+    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; }
+    .nav-hamburger span { display:block; width:22px; height:1.5px; background:var(--white); transition:var(--transition); }
+
+    /* ==========================================
+       HERO — usa banco-master.jpg se salvo na pasta
+    ========================================== */
+    #hero {
+      position:relative; min-height:100vh;
+      display:flex; align-items:center;
+      overflow:hidden; padding:120px 0 80px;
+    }
+
+    /* Background: imagem banco-master.jpg */
+    .hero-bg {
+      position:absolute; inset:0;
+      background-image:url('banco-master.jpg');
+      background-size:cover;
+      background-position:center center;
+      background-color:#060B16;
+    }
+    /* Overlay direcional: escuro à esquerda (texto legível), abre à direita */
+    .hero-overlay {
+      position:absolute; inset:0;
+      background:
+        linear-gradient(100deg,
+          rgba(6,11,22,0.95) 0%,
+          rgba(6,11,22,0.82) 38%,
+          rgba(6,11,22,0.55) 62%,
+          rgba(6,11,22,0.30) 100%
+        ),
+        linear-gradient(180deg,
+          rgba(6,11,22,0.55) 0%,
+          rgba(6,11,22,0.20) 40%,
+          rgba(6,11,22,0.65) 100%
+        );
+    }
+    /* Fallback quando não tem imagem */
+    .hero-bg-fallback {
+      position:absolute; inset:0;
+      background:
+        radial-gradient(ellipse 70% 55% at 65% 40%, rgba(30,100,220,0.09) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 60% at 5% 85%, rgba(30,100,220,0.05) 0%, transparent 60%),
+        linear-gradient(160deg, #060B16 0%, #08101E 100%);
+    }
+
+    /* Grade financeira */
+    .hero-grid {
+      position:absolute; inset:0;
+      background-image:
+        linear-gradient(rgba(42,108,220,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(42,108,220,0.04) 1px, transparent 1px);
+      background-size:68px 68px;
+      mask-image:radial-gradient(ellipse 60% 60% at 50% 50%, black 15%, transparent 100%);
+      z-index:1;
+    }
+
+    /* Linhas horizontais sutis */
+    .hero-hline {
+      position:absolute; left:0; right:0; height:1px;
+      background:linear-gradient(90deg, transparent 5%, var(--blue) 40%, var(--blue) 60%, transparent 95%);
+      opacity:.05; z-index:1;
+    }
+    .hero-hline:nth-child(1) { top:30%; }
+    .hero-hline:nth-child(2) { top:70%; }
+
+    /* Forma geométrica lateral */
+    .hero-shape {
+      position:absolute; right:80px; top:50%;
+      transform:translateY(-50%);
+      width:360px; height:360px;
+      pointer-events:none; z-index:1;
+    }
+    .ring {
+      position:absolute; border-radius:50%;
+      border:1px solid rgba(42,108,220,0.10);
+    }
+    .ring-1 { inset:0; animation:rr 55s linear infinite; }
+    .ring-2 { inset:50px; border-color:rgba(42,108,220,0.07); animation:rr 38s linear reverse infinite; }
+    .ring-3 { inset:110px; border-color:rgba(75,142,255,0.13); animation:rr 22s linear infinite; }
+    .hero-shape::after {
+      content:''; position:absolute;
+      top:50%; left:50%; transform:translate(-50%,-50%);
+      width:8px; height:8px;
+      background:var(--blue-bright); border-radius:50%;
+      box-shadow:0 0 22px rgba(59,120,255,0.7);
+    }
+    @keyframes rr {
+      from { transform:rotate(0deg); }
+      to   { transform:rotate(360deg); }
+    }
+
+    .hero-content { position:relative; z-index:2; max-width:650px; }
+
+    .hero-badge {
+      display:inline-flex; align-items:center; gap:10px;
+      background:rgba(30,100,220,0.1);
+      border:1px solid rgba(42,108,220,0.25);
+      border-radius:2px; padding:7px 16px 7px 10px;
+      font-size:.72rem; font-weight:500;
+      letter-spacing:.1em; text-transform:uppercase;
+      color:var(--blue-light); margin-bottom:28px;
+      animation:fadeUp .6s ease-out both;
+    }
+    .badge-pulse {
+      width:5px; height:5px; background:var(--blue-bright);
+      border-radius:50%; animation:blink 2s ease-in-out infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.25;} }
+
+    /* Logo Banco Master no hero */
+    .hero-bank-logo {
+      display:inline-flex; align-items:center; gap:12px;
+      margin-bottom:28px;
+      animation:fadeUp .6s .08s ease-out both;
+    }
+    .bm-icon {
+      width:44px; height:44px;
+      background:linear-gradient(145deg, #1A5CD4 0%, #3B78FF 100%);
+      border-radius:10px;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 4px 18px rgba(30,100,220,0.4);
+      flex-shrink:0;
+    }
+    .bm-icon svg { width:26px; height:26px; }
+    .bm-text { display:flex; flex-direction:column; }
+    .bm-label { font-size:.6rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--white-faint); line-height:1; margin-bottom:3px; }
+    .bm-name { font-family:var(--font-display); font-size:1.05rem; font-weight:600; color:var(--white); letter-spacing:.08em; text-transform:uppercase; }
+
+    .hero-headline {
+      font-family:var(--font-display);
+      font-size:clamp(2.1rem,5vw,3.5rem);
+      font-weight:500; line-height:1.1;
+      letter-spacing:-.025em; color:var(--white);
+      margin-bottom:20px;
+      animation:fadeUp .65s .16s ease-out both;
+    }
+    .hero-headline em { font-style:italic; color:var(--blue-light); }
+
+    .hero-sub {
+      font-size:.97rem; color:var(--white-dim);
+      line-height:1.84; max-width:510px;
+      margin-bottom:38px;
+      animation:fadeUp .65s .28s ease-out both;
+    }
+
+    .hero-actions {
+      display:flex; align-items:center; gap:13px; flex-wrap:wrap;
+      animation:fadeUp .65s .4s ease-out both;
+    }
+
+    /* Botões */
+    .btn-wa {
+      display:inline-flex; align-items:center; gap:9px;
+      background:var(--green-wa); color:#fff;
+      font-family:var(--font-body); font-size:.84rem; font-weight:600;
+      letter-spacing:.04em; padding:14px 26px;
+      border-radius:var(--radius); cursor:pointer;
+      transition:background var(--transition), transform var(--transition), box-shadow var(--transition);
+      box-shadow:0 4px 18px rgba(37,211,102,.22);
+    }
+    .btn-wa:hover { background:var(--green-wa-h); transform:translateY(-2px); box-shadow:0 8px 26px rgba(37,211,102,.32); }
+
+    .btn-blue {
+      display:inline-flex; align-items:center; gap:9px;
+      background:var(--blue); color:#fff;
+      font-family:var(--font-body); font-size:.84rem; font-weight:600;
+      letter-spacing:.04em; padding:14px 26px;
+      border-radius:var(--radius); cursor:pointer;
+      transition:background var(--transition), transform var(--transition), box-shadow var(--transition);
+      box-shadow:0 4px 18px rgba(30,100,220,.3);
+    }
+    .btn-blue:hover { background:var(--blue-bright); transform:translateY(-2px); box-shadow:0 8px 26px rgba(59,120,255,.4); }
+
+    .btn-ghost {
+      display:inline-flex; align-items:center; gap:8px;
+      background:transparent; color:var(--white-dim);
+      font-family:var(--font-body); font-size:.84rem; font-weight:500;
+      letter-spacing:.04em; padding:13px 20px;
+      border-radius:var(--radius); border:1px solid var(--border); cursor:pointer;
+      transition:color var(--transition), border-color var(--transition), background var(--transition);
+    }
+    .btn-ghost:hover { color:var(--blue-light); border-color:var(--border-hover); background:var(--blue-bg); }
+
+    .icon-wa { width:17px; height:17px; fill:currentColor; flex-shrink:0; }
+
+    /* Métricas */
+    .hero-metrics {
+      display:flex; gap:0; margin-top:56px;
+      border-top:1px solid var(--border); padding-top:30px;
+      animation:fadeUp .65s .52s ease-out both;
+    }
+    .hero-metric { flex:1; }
+    .hero-metric + .hero-metric { padding-left:26px; border-left:1px solid var(--border); }
+    .metric-val {
+      font-family:var(--font-display); font-size:1.95rem; font-weight:600;
+      color:var(--blue-light); line-height:1; margin-bottom:5px;
+    }
+    .metric-label { font-size:.71rem; color:var(--white-faint); letter-spacing:.06em; text-transform:uppercase; }
+
+    /* ==========================================
+       ANIMAÇÕES
+    ========================================== */
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(20px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+    .reveal {
+      opacity:0; transform:translateY(24px);
+      transition:opacity .6s ease-out, transform .6s ease-out;
+    }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .rd-1{transition-delay:.08s;} .rd-2{transition-delay:.16s;}
+    .rd-3{transition-delay:.24s;} .rd-4{transition-delay:.32s;}
+    .rd-5{transition-delay:.40s;}
+
+    /* ==========================================
+       FAIXA
+    ========================================== */
+    #faixa {
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+      padding:17px 0;
+      background:var(--graphite-2);
+      overflow:hidden;
+    }
+    .faixa-track {
+      display:flex; align-items:center; gap:50px;
+      white-space:nowrap;
+      animation:marquee 22s linear infinite;
+    }
+    .faixa-item {
+      font-size:.68rem; font-weight:600;
+      letter-spacing:.2em; text-transform:uppercase;
+      color:var(--white-faint);
+      display:flex; align-items:center; gap:10px; flex-shrink:0;
+    }
+    .faixa-item::before { content:'◆'; color:var(--blue-dim); font-size:.45rem; }
+    @keyframes marquee { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+
+    /* ==========================================
+       SOBRE
+    ========================================== */
+    #sobre { padding:112px 0; background:var(--bg-section); position:relative; overflow:hidden; }
+    #sobre::before {
+      content:''; position:absolute; right:-200px; top:-100px;
+      width:500px; height:500px;
+      background:radial-gradient(circle, rgba(30,100,220,0.05) 0%, transparent 70%);
+      pointer-events:none;
+    }
+
+    .sobre-layout { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
+
+    /* Bloco logo Banco Master na seção sobre */
+    .bm-card {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius-lg); padding:28px 26px;
+      display:flex; align-items:center; gap:18px;
+      margin-bottom:28px;
+      transition:border-color var(--transition);
+    }
+    .bm-card:hover { border-color:var(--border-hover); }
+    .bm-card-icon {
+      width:54px; height:54px; flex-shrink:0;
+      background:linear-gradient(145deg, #1A5CD4 0%, #3B78FF 100%);
+      border-radius:12px;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 6px 22px rgba(30,100,220,0.35);
+    }
+    .bm-card-icon svg { width:32px; height:32px; }
+    .bm-card-text {}
+    .bm-card-sup { font-size:.67rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--white-faint); margin-bottom:4px; }
+    .bm-card-name { font-family:var(--font-display); font-size:1.2rem; font-weight:600; color:var(--white); letter-spacing:.06em; text-transform:uppercase; }
+
+    .sobre-text p { color:var(--white-dim); font-size:.93rem; line-height:1.88; margin-bottom:16px; }
+    .sobre-text p:last-child { margin-bottom:0; }
+    .sobre-text strong { color:var(--white); font-weight:500; }
+
+    .sobre-cards { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+
+    .sobre-card {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius-lg); padding:24px 20px;
+      transition:border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+      position:relative; overflow:hidden;
+    }
+    .sobre-card::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:1.5px;
+      background:linear-gradient(90deg, var(--blue-light), transparent);
+      opacity:0; transition:opacity var(--transition);
+    }
+    .sobre-card:hover { border-color:var(--border-hover); transform:translateY(-4px); box-shadow:var(--shadow-blue); }
+    .sobre-card:hover::before { opacity:1; }
+
+    .sc-icon {
+      width:36px; height:36px; background:var(--blue-bg);
+      border:1px solid var(--border); border-radius:var(--radius);
+      display:flex; align-items:center; justify-content:center; margin-bottom:13px;
+    }
+    .sc-icon svg { width:16px; height:16px; stroke:var(--blue-light); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+    .sobre-card h4 { font-family:var(--font-display); font-size:.93rem; font-weight:600; color:var(--white); margin-bottom:7px; }
+    .sobre-card p { font-size:.78rem; color:var(--white-faint); line-height:1.65; }
+
+    /* ==========================================
+       SERVIÇOS
+    ========================================== */
+    #servicos { padding:112px 0; background:var(--bg); }
+    .servicos-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:50px; gap:26px; }
+
+    .servicos-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+
+    .servico-card {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius-lg); padding:28px 24px;
+      transition:border-color var(--transition), transform var(--transition), box-shadow var(--transition), background var(--transition);
+      position:relative; overflow:hidden;
+    }
+    .servico-card::after {
+      content:''; position:absolute; bottom:0; left:0; right:0; height:1px;
+      background:linear-gradient(90deg, var(--blue), var(--blue-light), var(--blue));
+      opacity:0; transition:opacity var(--transition);
+    }
+    .servico-card:hover { background:var(--bg-card-2); border-color:var(--border-hover); transform:translateY(-5px); box-shadow:var(--shadow-blue); }
+    .servico-card:hover::after { opacity:1; }
+
+    .srv-icon {
+      width:44px; height:44px; background:var(--blue-bg);
+      border:1px solid var(--border); border-radius:var(--radius);
+      display:flex; align-items:center; justify-content:center; margin-bottom:16px;
+      transition:background var(--transition), border-color var(--transition);
+    }
+    .servico-card:hover .srv-icon { background:rgba(30,100,220,0.13); border-color:rgba(42,108,220,0.3); }
+    .srv-icon svg { width:20px; height:20px; stroke:var(--blue-light); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+    .servico-card h3 { font-family:var(--font-display); font-size:1rem; font-weight:600; color:var(--white); margin-bottom:8px; transition:color var(--transition); }
+    .servico-card:hover h3 { color:var(--blue-light); }
+    .servico-card p { font-size:.79rem; color:var(--white-faint); line-height:1.72; }
+    .srv-tag {
+      display:inline-block; margin-top:13px;
+      font-size:.66rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--blue-dim); padding:3px 9px;
+      border:1px solid rgba(42,108,220,0.14); border-radius:100px;
+    }
+
+    /* ==========================================
+       DIFERENCIAIS
+    ========================================== */
+    #diferenciais { padding:112px 0; background:var(--bg-section); position:relative; }
+
+    .dif-layout { display:grid; grid-template-columns:400px 1fr; gap:72px; align-items:start; }
+    .dif-left { position:sticky; top:96px; }
+    .dif-bignumber {
+      font-family:var(--font-display); font-size:5.5rem; font-weight:700; line-height:1;
+      color:rgba(30,100,220,0.07); margin-bottom:-14px; letter-spacing:-.04em;
+    }
+
+    .dif-grid { display:grid; grid-template-columns:1fr 1fr; gap:13px; }
+
+    .dif-item {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius-lg); padding:20px 18px;
+      display:flex; flex-direction:column; gap:10px;
+      transition:border-color var(--transition), transform var(--transition);
+    }
+    .dif-item:hover { border-color:var(--border-hover); transform:translateY(-3px); }
+    .dif-icon {
+      width:32px; height:32px; background:var(--blue-bg);
+      border:1px solid var(--border); border-radius:var(--radius);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .dif-icon svg { width:14px; height:14px; stroke:var(--blue-light); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+    .dif-item h4 { font-size:.85rem; font-weight:600; color:var(--white); letter-spacing:.01em; }
+    .dif-item p { font-size:.77rem; color:var(--white-faint); line-height:1.65; }
+
+    .stats-row { display:flex; gap:13px; margin-top:30px; }
+    .stat-block { flex:1; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:18px 14px; text-align:center; }
+    .stat-num { font-family:var(--font-display); font-size:1.85rem; font-weight:600; color:var(--blue-light); line-height:1; margin-bottom:5px; }
+    .stat-lbl { font-size:.7rem; color:var(--white-faint); letter-spacing:.06em; text-transform:uppercase; }
+
+    /* ==========================================
+       PROCESSO
+    ========================================== */
+    #processo { padding:112px 0; background:var(--bg); }
+    .processo-center { text-align:center; margin-bottom:68px; }
+    .processo-center .section-label { justify-content:center; }
+    .processo-center .section-label::before { display:none; }
+    .processo-center .section-label::after { content:''; display:block; width:24px; height:1px; background:var(--blue-light); }
+    .processo-center .section-sub { margin:12px auto 0; text-align:center; }
+
+    .timeline { position:relative; display:flex; flex-direction:column; max-width:660px; margin:0 auto; }
+    .timeline::before {
+      content:''; position:absolute; left:37px; top:0; bottom:0;
+      width:1px; background:linear-gradient(180deg, var(--blue) 0%, rgba(30,100,220,0.08) 100%);
+    }
+
+    .tl-step { display:flex; gap:34px; align-items:flex-start; padding-bottom:42px; position:relative; }
+    .tl-step:last-child { padding-bottom:0; }
+
+    .tl-dot-wrap { width:74px; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+    .tl-dot {
+      width:24px; height:24px; background:var(--bg); border:1.5px solid var(--blue);
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+      position:relative; z-index:2;
+      transition:background var(--transition), box-shadow var(--transition);
+    }
+    .tl-step:hover .tl-dot { background:var(--blue); box-shadow:0 0 18px rgba(30,100,220,.45); }
+    .tl-dot-n { font-size:.62rem; font-weight:700; color:var(--blue-light); transition:color var(--transition); }
+    .tl-step:hover .tl-dot-n { color:#fff; }
+
+    .tl-body {
+      flex:1; background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius-lg); padding:24px 28px;
+      transition:border-color var(--transition), transform var(--transition);
+    }
+    .tl-step:hover .tl-body { border-color:var(--border-hover); transform:translateX(5px); }
+    .tl-badge { float:right; font-size:.62rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--blue-dim); background:var(--blue-bg); border:1px solid var(--border); padding:3px 9px; border-radius:100px; }
+    .tl-body h3 { font-family:var(--font-display); font-size:1.05rem; font-weight:600; color:var(--white); margin-bottom:7px; }
+    .tl-body p { font-size:.83rem; color:var(--white-dim); line-height:1.78; }
+
+    /* ==========================================
+       DEPOIMENTOS
+    ========================================== */
+    #depoimentos { padding:112px 0; background:var(--bg-section); }
+    .depo-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:17px; margin-top:50px; }
+
+    .depo-card {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius-lg); padding:32px 28px;
+      display:flex; flex-direction:column; gap:17px;
+      transition:border-color var(--transition), transform var(--transition);
+    }
+    .depo-card:hover { border-color:var(--border-hover); transform:translateY(-4px); }
+    .depo-stars { display:flex; gap:2px; }
+    .depo-star { color:var(--blue-light); font-size:.8rem; }
+    .depo-q { font-family:var(--font-display); font-size:2.8rem; line-height:.65; color:var(--blue-dim); }
+    .depo-text { font-size:.86rem; color:var(--white-dim); line-height:1.82; flex:1; }
+    .depo-author { display:flex; align-items:center; padding-top:16px; border-top:1px solid var(--border); }
+    .depo-info h5 { font-size:.82rem; font-weight:600; color:var(--white); margin-bottom:2px; }
+    .depo-info span { font-size:.71rem; color:var(--white-faint); }
+
+    /* ==========================================
+       CTA FINAL
+    ========================================== */
+    #cta-final {
+      padding:112px 0; background:var(--graphite-2);
+      position:relative; overflow:hidden;
+    }
+    #cta-final::before {
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(ellipse 55% 70% at 50% 50%, rgba(30,100,220,0.09) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    #cta-final::after {
+      content:''; position:absolute; inset:0;
+      background-image:
+        linear-gradient(rgba(42,108,220,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(42,108,220,0.03) 1px, transparent 1px);
+      background-size:56px 56px; pointer-events:none;
+    }
+    .cta-inner { position:relative; z-index:2; text-align:center; max-width:620px; margin:0 auto; }
+    .cta-inner .section-label { justify-content:center; }
+    .cta-inner .section-label::before { display:none; }
+    .cta-inner .section-label::after { content:''; display:block; width:24px; height:1px; background:var(--blue-light); }
+    .cta-inner .section-title { font-size:clamp(1.9rem,4.2vw,2.8rem); }
+    .cta-inner .section-sub { margin:14px auto 38px; text-align:center; }
+    .cta-orn { width:48px; height:1px; background:linear-gradient(90deg, transparent, var(--blue-light), transparent); margin:0 auto 34px; }
+    .cta-actions { display:flex; align-items:center; justify-content:center; gap:13px; flex-wrap:wrap; }
+
+    /* ==========================================
+       FOOTER
+    ========================================== */
+    #footer { background:#040810; border-top:1px solid var(--border); padding:64px 0 26px; }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1.4fr; gap:50px; margin-bottom:48px; }
+
+    .footer-logo {
+      display:flex; align-items:center; gap:10px;
+      font-family:var(--font-display); font-size:1.15rem; font-weight:600;
+      letter-spacing:.1em; text-transform:uppercase; color:var(--white); margin-bottom:13px;
+    }
+    .footer-logo-mark {
+      width:26px; height:26px;
+      background:linear-gradient(135deg, #1A5CD4, #4B8EFF);
+      border-radius:5px;
+      display:flex; align-items:center; justify-content:center;
+      font-family:var(--font-display); font-size:.7rem; font-weight:700; color:#fff;
+    }
+
+    .footer-desc { font-size:.79rem; color:var(--white-faint); line-height:1.82; max-width:265px; margin-bottom:24px; }
+    .footer-social { display:flex; gap:9px; }
+    .footer-social a {
+      width:32px; height:32px; background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius); display:flex; align-items:center; justify-content:center;
+      transition:border-color var(--transition), background var(--transition);
+    }
+    .footer-social a:hover { border-color:var(--border-hover); background:var(--blue-bg); }
+    .footer-social svg { width:13px; height:13px; stroke:var(--white-dim); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; transition:stroke var(--transition); }
+    .footer-social a:hover svg { stroke:var(--blue-light); }
+
+    .footer-col h4 { font-size:.68rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--white); margin-bottom:18px; padding-bottom:10px; border-bottom:1px solid var(--border); }
+    .footer-links { display:flex; flex-direction:column; gap:11px; list-style:none; }
+    .footer-links a { font-size:.79rem; color:var(--white-faint); transition:color var(--transition); display:flex; align-items:center; gap:7px; }
+    .footer-links a:hover { color:var(--blue-light); }
+    .footer-links a::before { content:''; display:block; width:10px; height:1px; background:var(--blue-dim); transition:background var(--transition); }
+    .footer-links a:hover::before { background:var(--blue-light); }
+
+    .fci { display:flex; align-items:flex-start; gap:10px; margin-bottom:13px; }
+    .fci svg { width:14px; height:14px; stroke:var(--blue-dim); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; margin-top:2px; }
+    .fci span { font-size:.78rem; color:var(--white-faint); line-height:1.65; }
+    .fci a { color:var(--white-faint); transition:color var(--transition); }
+    .fci a:hover { color:var(--blue-light); }
+
+    .footer-bottom { border-top:1px solid var(--border); padding-top:22px; display:flex; align-items:center; justify-content:space-between; gap:13px; flex-wrap:wrap; }
+    .footer-copy { font-size:.71rem; color:var(--white-faint); }
+    .footer-copy span { color:var(--blue-dim); }
+    .footer-btm-links { display:flex; gap:20px; }
+    .footer-btm-links a { font-size:.71rem; color:var(--white-faint); transition:color var(--transition); }
+    .footer-btm-links a:hover { color:var(--blue-light); }
+
+    /* ==========================================
+       FLOAT WA
+    ========================================== */
+    .wa-float {
+      position:fixed; bottom:26px; right:26px; z-index:99;
+      width:50px; height:50px; background:var(--green-wa);
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+      box-shadow:0 4px 18px rgba(37,211,102,.38);
+      transition:transform var(--transition), box-shadow var(--transition);
+      animation:fadeIn 1s 1.8s ease-out both;
+    }
+    .wa-float:hover { transform:scale(1.1); box-shadow:0 8px 28px rgba(37,211,102,.48); }
+    .wa-float svg { width:25px; height:25px; fill:#fff; }
+    .wa-tip {
+      position:absolute; right:60px; top:50%; transform:translateY(-50%);
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius); padding:7px 12px;
+      font-size:.72rem; font-weight:500; color:var(--white-dim);
+      white-space:nowrap; opacity:0; pointer-events:none; transition:opacity var(--transition);
+    }
+    .wa-float:hover .wa-tip { opacity:1; }
+
+    /* ==========================================
+       RESPONSIVO
+    ========================================== */
+    @media(max-width:1024px) {
+      .sobre-layout { grid-template-columns:1fr; gap:44px; }
+      .dif-layout { grid-template-columns:1fr; gap:36px; }
+      .dif-left { position:static; }
+      .footer-grid { grid-template-columns:1fr 1fr; gap:36px; }
+    }
+    @media(max-width:768px) {
+      .container { padding:0 20px; }
+      .nav-links { display:none; }
+      .nav-hamburger { display:flex; }
+      .hero-metrics { flex-direction:column; gap:20px; }
+      .hero-metric + .hero-metric { padding-left:0; border-left:none; border-top:1px solid var(--border); padding-top:20px; }
+      .servicos-grid { grid-template-columns:1fr; }
+      .servicos-header { flex-direction:column; align-items:flex-start; }
+      .depo-grid { grid-template-columns:1fr; }
+      .sobre-cards { grid-template-columns:1fr; }
+      .dif-grid { grid-template-columns:1fr; }
+      .stats-row { flex-direction:column; }
+      .footer-grid { grid-template-columns:1fr; gap:28px; }
+      .footer-bottom { flex-direction:column; align-items:flex-start; }
+      .hero-shape { display:none; }
+      #hero { min-height:auto; padding:96px 0 56px; }
+    }
+    @media(min-width:769px) and (max-width:1023px) {
+      .servicos-grid { grid-template-columns:repeat(2,1fr); }
+      .depo-grid { grid-template-columns:1fr 1fr; }
+    }
+    @media(max-width:540px) {
+      .hero-actions { flex-direction:column; align-items:flex-start; }
+      .cta-actions { flex-direction:column; align-items:center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" role="navigation" aria-label="Navegação principal">
+    <div class="container">
+      <div class="nav-inner">
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#processo">Processo</a></li>
+          <li><a href="https://wa.me/5511972159565" target="_blank" rel="noopener noreferrer" class="nav-cta">Solicitar Diligência</a></li>
+        </ul>
+        <button class="nav-hamburger" aria-label="Abrir menu" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" aria-label="Apresentação">
+    <div class="hero-bg-fallback"></div>
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-hline"></div>
+    <div class="hero-hline"></div>
+    <div class="hero-shape" aria-hidden="true">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="ring ring-3"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-pulse"></span>
+          Diligências Operacionais · Banco Master
+        </div>
+
+        <h1 class="hero-headline">
+          Diligências envolvendo o <em>Banco Master</em> executadas com precisão
+        </h1>
+
+        <p class="hero-sub">
+          Somos a unidade operacional especializada em processos que envolvem o Banco Master — executamos diligências com agilidade, rastreabilidade total e relatórios completos. Do protocolo à audiência, sem burocracia.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/5511972159565" target="_blank" rel="noopener noreferrer" class="btn-wa" aria-label="Enviar demanda via WhatsApp">
+            <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Enviar Demanda
+          </a>
+          <a href="#servicos" class="btn-ghost">
+            Ver o que fazemos
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-metrics" role="list">
+          <div class="hero-metric" role="listitem">
+            <div class="metric-val">500+</div>
+            <div class="metric-label">Diligências Banco Master</div>
+          </div>
+          <div class="hero-metric" role="listitem">
+            <div class="metric-val">98%</div>
+            <div class="metric-label">Prazos cumpridos</div>
+          </div>
+          <div class="hero-metric" role="listitem">
+            <div class="metric-val">&lt;24h</div>
+            <div class="metric-label">Resposta média</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAIXA -->
+  <div id="faixa" aria-hidden="true">
+    <div class="faixa-track">
+      <span class="faixa-item">Audiências Banco Master</span>
+      <span class="faixa-item">Penhoras & SISBAJUD</span>
+      <span class="faixa-item">Execuções Fiscais</span>
+      <span class="faixa-item">Protocolos Judiciais</span>
+      <span class="faixa-item">Acompanhamento Processual</span>
+      <span class="faixa-item">Ofícios e Intimações</span>
+      <span class="faixa-item">Certidões e Cópias</span>
+      <span class="faixa-item">Bloqueios de Ativos</span>
+      <span class="faixa-item">Distribuições</span>
+      <!-- loop -->
+      <span class="faixa-item">Audiências Banco Master</span>
+      <span class="faixa-item">Penhoras & SISBAJUD</span>
+      <span class="faixa-item">Execuções Fiscais</span>
+      <span class="faixa-item">Protocolos Judiciais</span>
+      <span class="faixa-item">Acompanhamento Processual</span>
+      <span class="faixa-item">Ofícios e Intimações</span>
+      <span class="faixa-item">Certidões e Cópias</span>
+      <span class="faixa-item">Bloqueios de Ativos</span>
+      <span class="faixa-item">Distribuições</span>
+    </div>
+  </div>
+
+  <!-- SOBRE -->
+  <section id="sobre" aria-labelledby="sobre-titulo">
+    <div class="container">
+      <div class="sobre-layout">
+        <div class="sobre-text reveal">
+          <span class="section-label">Quem somos</span>
+          <h2 class="section-title" id="sobre-titulo">
+            Especialistas em diligências <em>Banco Master</em>
+          </h2>
+          <span class="blue-line"></span>
+
+          <p>
+            Somos uma <strong>unidade operacional especializada</strong> em diligências envolvendo o Banco Master — de ambos os lados do processo. Executamos com o nível de precisão que a complexidade de cada demanda exige.
+          </p>
+          <p>
+            Atuamos em processos que envolvem o Banco Master — <strong>penhoras, bloqueios, audiências, protocolos e execuções</strong> — com foco total em prazo, rastreabilidade e relatório completo.
+          </p>
+          <p>
+            Nossa estrutura foi desenhada para absorber volume e lidar com <strong>urgências e demandas recorrentes</strong>, entregando consistência operacional em cada execução.
+          </p>
+        </div>
+
+        <div class="sobre-cards">
+          <div class="sobre-card reveal rd-1">
+            <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <h4>Resposta Ágil</h4>
+            <p>Confirmação em horas. Urgências com protocolo prioritário e execução imediata.</p>
+          </div>
+          <div class="sobre-card reveal rd-2">
+            <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h4>Sigilo Total</h4>
+            <p>Cada demanda tratada com discrição total. Nenhuma informação circula fora da operação.</p>
+          </div>
+          <div class="sobre-card reveal rd-3">
+            <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <h4>Relatório Completo</h4>
+            <p>Cada diligência com documentação, evidências e comprovantes para o banco.</p>
+          </div>
+          <div class="sobre-card reveal rd-4">
+            <div class="sc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+            <h4>Especialização Banco Master</h4>
+            <p>Estrutura voltada para demandas que envolvem o Banco Master — de qualquer lado do processo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" aria-labelledby="servicos-titulo">
+    <div class="container">
+      <div class="servicos-header reveal">
+        <div>
+          <span class="section-label">O que executamos</span>
+          <h2 class="section-title" id="servicos-titulo">
+            Diligências <em>Banco Master</em> de ponta a ponta
+          </h2>
+        </div>
+        <p class="section-sub" style="margin-top:0">
+          Cobertura completa de demandas operacionais envolvendo o Banco Master — com precisão e rastreabilidade em cada execução.
+        </p>
+      </div>
+
+      <div class="servicos-grid">
+
+        <article class="servico-card reveal rd-1" tabindex="0">
+          <div class="srv-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <h3>Audiências</h3>
+          <p>Representação presencial e por videoconferência em audiências cíveis e de execução envolvendo o Banco Master.</p>
+          <span class="srv-tag">Presencial & Remoto</span>
+        </article>
+
+        <article class="servico-card reveal rd-2" tabindex="0">
+          <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div>
+          <h3>Protocolos</h3>
+          <p>Entrega de petições, ofícios e documentos em varas e tribunais nos processos envolvendo o Banco Master, com número de protocolo imediato.</p>
+          <span class="srv-tag">Urgência Disponível</span>
+        </article>
+
+        <article class="servico-card reveal rd-3" tabindex="0">
+          <div class="srv-icon"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+          <h3>Penhoras & SISBAJUD</h3>
+          <p>Execução de penhoras on-line, bloqueios SISBAJUD e ordens de restrição patrimonial em processos que envolvem o Banco Master.</p>
+          <span class="srv-tag">Especialidade</span>
+        </article>
+
+        <article class="servico-card reveal rd-1" tabindex="0">
+          <div class="srv-icon"><svg viewBox="0 0 24 24"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg></div>
+          <h3>Cópias Processuais</h3>
+          <p>Obtenção de cópias integrais de autos, certidões e acórdãos nos processos envolvendo o Banco Master, com envio digital organizado.</p>
+          <span class="srv-tag">Digital & Físico</span>
+        </article>
+
+        <article class="servico-card reveal rd-2" tabindex="0">
+          <div class="srv-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3>Despachos</h3>
+          <p>Contato direto com secretarias e cartórios para agilizar o andamento dos processos envolvendo o Banco Master.</p>
+          <span class="srv-tag">Alta Prioridade</span>
+        </article>
+
+        <article class="servico-card reveal rd-3" tabindex="0">
+          <div class="srv-icon"><svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
+          <h3>Distribuições</h3>
+          <p>Ajuizamento e distribuição de ações de execução, cobrança e recuperação de crédito envolvendo o Banco Master.</p>
+          <span class="srv-tag">Crédito & Cobrança</span>
+        </article>
+
+        <article class="servico-card reveal rd-1" tabindex="0">
+          <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <h3>Acompanhamento Processual</h3>
+          <p>Monitoramento contínuo dos processos envolvendo o Banco Master, com alertas de movimentação e relatórios periódicos.</p>
+          <span class="srv-tag">Tempo Real</span>
+        </article>
+
+        <article class="servico-card reveal rd-2" tabindex="0">
+          <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <h3>Ofícios & Intimações</h3>
+          <p>Cumprimento de ofícios judiciais e cartas de intimação nas demandas envolvendo o Banco Master em endereços e órgãos.</p>
+          <span class="srv-tag">Rastreável</span>
+        </article>
+
+        <article class="servico-card reveal rd-3" tabindex="0">
+          <div class="srv-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <h3>Suporte Recorrente</h3>
+          <p>Atendimento contínuo para escritórios e clientes com alto volume de demandas mensais envolvendo o Banco Master.</p>
+          <span class="srv-tag">Contrato Dedicado</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section id="diferenciais" aria-labelledby="dif-titulo">
+    <div class="container">
+      <div class="dif-layout">
+        <div class="dif-left reveal">
+          <span class="section-label">Diferenciais</span>
+          <div class="dif-bignumber" aria-hidden="true">07</div>
+          <h2 class="section-title" id="dif-titulo">
+            Por que escolher o <em>Rudy</em> para diligências Banco Master?
+          </h2>
+          <span class="blue-line"></span>
+          <p class="section-sub">
+            Não entregamos apenas presença — entregamos resultado documentado, com rastreabilidade total e comunicação direta em cada etapa.
+          </p>
+          <div class="stats-row">
+            <div class="stat-block">
+              <div class="stat-num">100%</div>
+              <div class="stat-lbl">Relatórios entregues</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-num">+5</div>
+              <div class="stat-lbl">Anos no setor</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dif-grid">
+          <div class="dif-item reveal rd-1">
+            <div class="dif-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <h4>Velocidade de Resposta</h4>
+            <p>Confirmamos e iniciamos execução em horas. Urgências atendidas com protocolo prioritário e dedicado.</p>
+          </div>
+          <div class="dif-item reveal rd-2">
+            <div class="dif-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17z"/></svg></div>
+            <h4>Comunicação Direta</h4>
+            <p>Canal direto com o responsável pela demanda. Sem intermediários, sem ruído na operação.</p>
+          </div>
+          <div class="dif-item reveal rd-3">
+            <div class="dif-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <h4>Prazo Inegociável</h4>
+            <p>Cada prazo processual é tratado como prioridade máxima. Sem atraso, sem surpresa.</p>
+          </div>
+          <div class="dif-item reveal rd-4">
+            <div class="dif-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <h4>Relatórios Padronizados</h4>
+            <p>Documentação entregue no formato que o cliente precisa — com evidências, carimbos e confirmações.</p>
+          </div>
+          <div class="dif-item reveal rd-1">
+            <div class="dif-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h4>Sigilo Absoluto</h4>
+            <p>Todas as informações de cada demanda são tratadas com confidencialidade total. Nada circula fora da operação.</p>
+          </div>
+          <div class="dif-item reveal rd-2">
+            <div class="dif-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <h4>Cobertura Consolidada</h4>
+            <p>Presença e relacionamento estabelecido nos fóruns e cartórios da região de atuação do banco.</p>
+          </div>
+          <div class="dif-item reveal rd-3" style="grid-column:span 2">
+            <div class="dif-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <h4>Volume sem queda de qualidade</h4>
+            <p>Estrutura dimensionada para absorver demandas recorrentes e alto volume — quem contrata não precisa se preocupar com capacidade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section id="processo" aria-labelledby="proc-titulo">
+    <div class="container">
+      <div class="processo-center reveal">
+        <span class="section-label">Como funciona</span>
+        <h2 class="section-title" id="proc-titulo">
+          Do pedido à <em>entrega</em>
+        </h2>
+        <p class="section-sub">
+          Fluxo simples e rastreável. Você envia a demanda — executamos e devolvemos com tudo documentado.
+        </p>
+      </div>
+
+      <div class="timeline" role="list">
+
+        <div class="tl-step reveal rd-1" role="listitem">
+          <div class="tl-dot-wrap" aria-hidden="true"><div class="tl-dot"><span class="tl-dot-n">01</span></div></div>
+          <div class="tl-body">
+            <span class="tl-badge">Entrada</span>
+            <h3>Solicitação da Diligência</h3>
+            <p>O cliente envia a demanda via WhatsApp com os dados do processo, prazo e instruções. Atendemos 24h para urgências.</p>
+          </div>
+        </div>
+
+        <div class="tl-step reveal rd-2" role="listitem">
+          <div class="tl-dot-wrap" aria-hidden="true"><div class="tl-dot"><span class="tl-dot-n">02</span></div></div>
+          <div class="tl-body">
+            <span class="tl-badge">até 2h</span>
+            <h3>Análise e Confirmação</h3>
+            <p>Analisamos viabilidade e prazo. Confirmamos o aceite com estimativa de execução ou sinalizamos impedimentos antes de iniciar — sem surpresas.</p>
+          </div>
+        </div>
+
+        <div class="tl-step reveal rd-3" role="listitem">
+          <div class="tl-dot-wrap" aria-hidden="true"><div class="tl-dot"><span class="tl-dot-n">03</span></div></div>
+          <div class="tl-body">
+            <span class="tl-badge">Execução</span>
+            <h3>Execução com Registro Total</h3>
+            <p>A diligência é realizada com registro em cada etapa — protocolos, carimbos, fotos e certidões. Nada acontece sem documentação.</p>
+          </div>
+        </div>
+
+        <div class="tl-step reveal rd-4" role="listitem">
+          <div class="tl-dot-wrap" aria-hidden="true"><div class="tl-dot"><span class="tl-dot-n">04</span></div></div>
+          <div class="tl-body">
+            <span class="tl-badge">Tempo real</span>
+            <h3>Atualização Proativa</h3>
+            <p>O cliente é comunicado em cada ponto crítico da diligência. Você não precisa perguntar — nós informamos antes que surja a dúvida.</p>
+          </div>
+        </div>
+
+        <div class="tl-step reveal rd-5" role="listitem">
+          <div class="tl-dot-wrap" aria-hidden="true"><div class="tl-dot"><span class="tl-dot-n">05</span></div></div>
+          <div class="tl-body">
+            <span class="tl-badge">Entrega</span>
+            <h3>Relatório e Encerramento</h3>
+            <p>Relatório completo entregue com todos os documentos, registros e observações — pronto para arquivo e uso processual imediato.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" aria-labelledby="depo-titulo">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Depoimentos</span>
+        <h2 class="section-title" id="depo-titulo">
+          Quem opera com o <em>Rudy</em> não volta atrás
+        </h2>
+        <span class="blue-line"></span>
+      </div>
+
+      <div class="depo-grid">
+        <article class="depo-card reveal rd-1">
+          <div class="depo-stars" aria-label="5 estrelas"><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span></div>
+          <div class="depo-q" aria-hidden="true">"</div>
+          <p class="depo-text">Trabalhamos com volume alto de processos envolvendo o Banco Master. O Rudy é o único correspondente que mantém consistência mesmo nos meses mais pesados — prazo, relatório e comunicação, sempre.</p>
+          <div class="depo-author">
+            <div class="depo-info">
+              <h5>Felipe Monteiro</h5>
+              <span>Sócio · Escritório de Advocacia</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="depo-card reveal rd-2">
+          <div class="depo-stars" aria-label="5 estrelas"><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span></div>
+          <div class="depo-q" aria-hidden="true">"</div>
+          <p class="depo-text">Precisávamos de alguém que entendesse o ritmo das nossas demandas envolvendo o Banco Master. O Rudy opera diferente — ele se adapta ao nosso processo, não o contrário. A comunicação é direta e os relatórios chegam sem a gente pedir.</p>
+          <div class="depo-author">
+            <div class="depo-info">
+              <h5>Roberta Souza</h5>
+              <span>Advogada · Escritório Especializado em Bancário</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="depo-card reveal rd-3">
+          <div class="depo-stars" aria-label="5 estrelas"><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span></div>
+          <div class="depo-q" aria-hidden="true">"</div>
+          <p class="depo-text">O que mais valorizo é a previsibilidade. Mando a demanda, sei que vai ser feita no prazo e recebo o relatório sem precisar cobrar. Para quem atua no volume que temos com o Banco Master, isso é decisivo.</p>
+          <div class="depo-author">
+            <div class="depo-info">
+              <h5>Thiago Lima</h5>
+              <span>Advogado · Contencioso Bancário</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="cta-final" aria-labelledby="cta-titulo">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <span class="section-label">Vamos operar juntos</span>
+        <div class="cta-orn" aria-hidden="true"></div>
+        <h2 class="section-title" id="cta-titulo">
+          Tem diligências do <em>Banco Master</em> para executar?
+        </h2>
+        <p class="section-sub">
+          Envie a demanda agora. Analisamos, confirmamos e colocamos em execução — com rastreabilidade total e relatório garantido.
+        </p>
+        <div class="cta-actions">
+          <a href="https://wa.me/5511972159565" target="_blank" rel="noopener noreferrer" class="btn-wa" aria-label="Enviar demanda via WhatsApp">
+            <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Enviar Demanda
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Rudy</div>
+          <p class="footer-desc">Unidade operacional especializada em diligências envolvendo o Banco Master. Execução precisa, rastreável e documentada em cada demanda.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#processo">Como Funciona</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Diligências</h4>
+          <ul class="footer-links">
+            <li><a href="#servicos">Audiências</a></li>
+            <li><a href="#servicos">Penhoras & SISBAJUD</a></li>
+            <li><a href="#servicos">Protocolos</a></li>
+            <li><a href="#servicos">Acompanhamento Processual</a></li>
+            <li><a href="#servicos">Suporte Recorrente</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <div class="fci">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17z"/></svg>
+            <span><a href="https://wa.me/5511972159565" target="_blank" rel="noopener noreferrer">+55 11 97215-9565</a></span>
+          </div>
+          <div class="fci">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Rua Pascoal Bianco, 42<br>Pinheiros, São Paulo — SP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 <span>Rudy</span> · Diligências Banco Master. Todos os direitos reservados.</p>
+        <div class="footer-btm-links">
+          <a href="#">Privacidade</a>
+          <a href="#">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOAT WA -->
+  <a href="https://wa.me/5511972159565" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="WhatsApp">
+    <div class="wa-tip">Enviar demanda</div>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- JS -->
+  <script>
+    /* Navbar scroll */
+    const nav = document.getElementById('navbar');
+    const tick = () => nav.classList.toggle('scrolled', window.scrollY > 36);
+    window.addEventListener('scroll', tick, { passive:true });
+    tick();
+
+    /* Scroll reveal */
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold:.1, rootMargin:'0px 0px -32px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    /* Counter nas métricas do hero */
+    document.querySelectorAll('.metric-val').forEach(el => {
+      const io2 = new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting) return;
+        const raw = el.textContent.trim();
+        const num = parseFloat(raw.replace(/[^0-9.]/g,''));
+        if (isNaN(num)) return;
+        const prefix = raw.match(/^[^0-9]*/)[0];
+        const suffix = raw.match(/[^0-9.]*$/)[0];
+        const isFloat = raw.includes('.');
+        const dur = 1600, t0 = performance.now();
+        const step = now => {
+          const p = Math.min((now-t0)/dur,1);
+          const ease = 1-Math.pow(1-p,3);
+          el.textContent = prefix+(isFloat?(num*ease).toFixed(1):Math.round(num*ease))+suffix;
+          if(p<1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+        io2.unobserve(el);
+      }, {threshold:.5});
+      io2.observe(el);
+    });
+
+    /* Mobile menu */
+    function toggleMenu() {
+      const nl = document.querySelector('.nav-links');
+      const open = nl.style.display === 'flex';
+      nl.style.cssText = open ? '' :
+        'display:flex;flex-direction:column;position:fixed;top:58px;left:0;right:0;background:rgba(6,11,22,.98);backdrop-filter:blur(22px);padding:20px 28px 28px;gap:17px;border-bottom:1px solid rgba(42,108,220,.16);z-index:99;';
+    }
+    document.querySelectorAll('.nav-links a').forEach(a =>
+      a.addEventListener('click', () => { if(window.innerWidth<769) document.querySelector('.nav-links').style.cssText=''; })
+    );
+  </script>
+</body>
+</html>
