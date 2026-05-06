@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rudy — Diligências Envolvendo o Banco Master</title>
-  <meta name="description" content="Unidade especializada em diligências envolvendo o Banco Master. Execução precisa, relatórios completos e comprometimento total em cada demanda." />
-  <meta name="keywords" content="diligências banco master, correspondente jurídico banco master, protocolos, audiências, penhoras, acompanhamento processual" />
-  <meta property="og:title" content="Rudy — Diligências Banco Master" />
-  <meta property="og:description" content="Unidade operacional especializada em diligências envolvendo o Banco Master. Precisão, agilidade e rastreabilidade total em cada execução." />
+  <title>Rudy — Serviços no Banco Master</title>
+  <meta name="description" content="Unidade especializada em serviços no Banco Master. Execução precisa, relatórios completos e comprometimento total em cada demanda." />
+  <meta name="keywords" content="serviços banco master, correspondente jurídico banco master, protocolos, audiências, penhoras, acompanhamento processual" />
+  <meta property="og:title" content="Rudy — Serviços Banco Master" />
+  <meta property="og:description" content="Unidade operacional especializada em serviços no Banco Master. Precisão, agilidade e rastreabilidade total em cada execução." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -357,29 +357,6 @@
     .rd-3{transition-delay:.24s;} .rd-4{transition-delay:.32s;}
     .rd-5{transition-delay:.40s;}
 
-    /* ==========================================
-       FAIXA
-    ========================================== */
-    #faixa {
-      border-top:1px solid var(--border);
-      border-bottom:1px solid var(--border);
-      padding:17px 0;
-      background:var(--graphite-2);
-      overflow:hidden;
-    }
-    .faixa-track {
-      display:flex; align-items:center; gap:50px;
-      white-space:nowrap;
-      animation:marquee 22s linear infinite;
-    }
-    .faixa-item {
-      font-size:.68rem; font-weight:600;
-      letter-spacing:.2em; text-transform:uppercase;
-      color:var(--white-faint);
-      display:flex; align-items:center; gap:10px; flex-shrink:0;
-    }
-    .faixa-item::before { content:'◆'; color:var(--blue-dim); font-size:.45rem; }
-    @keyframes marquee { from{transform:translateX(0);} to{transform:translateX(-50%);} }
 
     /* ==========================================
        SOBRE
@@ -444,45 +421,6 @@
     .sobre-card h4 { font-family:var(--font-display); font-size:.93rem; font-weight:600; color:var(--white); margin-bottom:7px; }
     .sobre-card p { font-size:.78rem; color:var(--white-faint); line-height:1.65; }
 
-    /* ==========================================
-       SERVIÇOS
-    ========================================== */
-    #servicos { padding:112px 0; background:var(--bg); }
-    .servicos-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:50px; gap:26px; }
-
-    .servicos-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-
-    .servico-card {
-      background:var(--bg-card); border:1px solid var(--border);
-      border-radius:var(--radius-lg); padding:28px 24px;
-      transition:border-color var(--transition), transform var(--transition), box-shadow var(--transition), background var(--transition);
-      position:relative; overflow:hidden;
-    }
-    .servico-card::after {
-      content:''; position:absolute; bottom:0; left:0; right:0; height:1px;
-      background:linear-gradient(90deg, var(--blue), var(--blue-light), var(--blue));
-      opacity:0; transition:opacity var(--transition);
-    }
-    .servico-card:hover { background:var(--bg-card-2); border-color:var(--border-hover); transform:translateY(-5px); box-shadow:var(--shadow-blue); }
-    .servico-card:hover::after { opacity:1; }
-
-    .srv-icon {
-      width:44px; height:44px; background:var(--blue-bg);
-      border:1px solid var(--border); border-radius:var(--radius);
-      display:flex; align-items:center; justify-content:center; margin-bottom:16px;
-      transition:background var(--transition), border-color var(--transition);
-    }
-    .servico-card:hover .srv-icon { background:rgba(30,100,220,0.13); border-color:rgba(42,108,220,0.3); }
-    .srv-icon svg { width:20px; height:20px; stroke:var(--blue-light); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
-    .servico-card h3 { font-family:var(--font-display); font-size:1rem; font-weight:600; color:var(--white); margin-bottom:8px; transition:color var(--transition); }
-    .servico-card:hover h3 { color:var(--blue-light); }
-    .servico-card p { font-size:.79rem; color:var(--white-faint); line-height:1.72; }
-    .srv-tag {
-      display:inline-block; margin-top:13px;
-      font-size:.66rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase;
-      color:var(--blue-dim); padding:3px 9px;
-      border:1px solid rgba(42,108,220,0.14); border-radius:100px;
-    }
 
     /* ==========================================
        DIFERENCIAIS
@@ -695,8 +633,6 @@
       .nav-hamburger { display:flex; }
       .hero-metrics { flex-direction:column; gap:20px; }
       .hero-metric + .hero-metric { padding-left:0; border-left:none; border-top:1px solid var(--border); padding-top:20px; }
-      .servicos-grid { grid-template-columns:1fr; }
-      .servicos-header { flex-direction:column; align-items:flex-start; }
       .depo-grid { grid-template-columns:1fr; }
       .sobre-cards { grid-template-columns:1fr; }
       .dif-grid { grid-template-columns:1fr; }
@@ -707,7 +643,6 @@
       #hero { min-height:auto; padding:96px 0 56px; }
     }
     @media(min-width:769px) and (max-width:1023px) {
-      .servicos-grid { grid-template-columns:repeat(2,1fr); }
       .depo-grid { grid-template-columns:1fr 1fr; }
     }
     @media(max-width:540px) {
@@ -724,10 +659,9 @@
       <div class="nav-inner">
         <ul class="nav-links">
           <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
           <li><a href="#diferenciais">Diferenciais</a></li>
           <li><a href="#processo">Processo</a></li>
-          <li><a href="https://wa.me/5511972159565" target="_blank" rel="noopener noreferrer" class="nav-cta">Solicitar Diligência</a></li>
+          <li><a href="https://wa.me/5511972159565" target="_blank" rel="noopener noreferrer" class="nav-cta">Falar com Rudy</a></li>
         </ul>
         <button class="nav-hamburger" aria-label="Abrir menu" onclick="toggleMenu()">
           <span></span><span></span><span></span>
@@ -752,17 +686,13 @@
 
     <div class="container">
       <div class="hero-content">
-        <div class="hero-badge">
-          <span class="badge-pulse"></span>
-          Diligências Operacionais · Banco Master
-        </div>
 
         <h1 class="hero-headline">
-          Diligências envolvendo o <em>Banco Master</em> executadas com precisão
+          Serviços no <em>Banco Master</em> executados com precisão
         </h1>
 
         <p class="hero-sub">
-          Somos a unidade operacional especializada em processos que envolvem o Banco Master — executamos diligências com agilidade, rastreabilidade total e relatórios completos. Do protocolo à audiência, sem burocracia.
+          Somos a unidade operacional especializada em processos do Banco Master — atuamos com agilidade, rastreabilidade total e relatórios completos. Do protocolo à audiência, sem burocracia.
         </p>
 
         <div class="hero-actions">
@@ -772,7 +702,7 @@
             </svg>
             Enviar Demanda
           </a>
-          <a href="#servicos" class="btn-ghost">
+          <a href="#sobre" class="btn-ghost">
             Ver o que fazemos
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
@@ -781,7 +711,7 @@
         <div class="hero-metrics" role="list">
           <div class="hero-metric" role="listitem">
             <div class="metric-val">500+</div>
-            <div class="metric-label">Diligências Banco Master</div>
+            <div class="metric-label">Serviços Banco Master</div>
           </div>
           <div class="hero-metric" role="listitem">
             <div class="metric-val">98%</div>
@@ -796,30 +726,6 @@
     </div>
   </section>
 
-  <!-- FAIXA -->
-  <div id="faixa" aria-hidden="true">
-    <div class="faixa-track">
-      <span class="faixa-item">Audiências Banco Master</span>
-      <span class="faixa-item">Penhoras & SISBAJUD</span>
-      <span class="faixa-item">Execuções Fiscais</span>
-      <span class="faixa-item">Protocolos Judiciais</span>
-      <span class="faixa-item">Acompanhamento Processual</span>
-      <span class="faixa-item">Ofícios e Intimações</span>
-      <span class="faixa-item">Certidões e Cópias</span>
-      <span class="faixa-item">Bloqueios de Ativos</span>
-      <span class="faixa-item">Distribuições</span>
-      <!-- loop -->
-      <span class="faixa-item">Audiências Banco Master</span>
-      <span class="faixa-item">Penhoras & SISBAJUD</span>
-      <span class="faixa-item">Execuções Fiscais</span>
-      <span class="faixa-item">Protocolos Judiciais</span>
-      <span class="faixa-item">Acompanhamento Processual</span>
-      <span class="faixa-item">Ofícios e Intimações</span>
-      <span class="faixa-item">Certidões e Cópias</span>
-      <span class="faixa-item">Bloqueios de Ativos</span>
-      <span class="faixa-item">Distribuições</span>
-    </div>
-  </div>
 
   <!-- SOBRE -->
   <section id="sobre" aria-labelledby="sobre-titulo">
@@ -828,18 +734,18 @@
         <div class="sobre-text reveal">
           <span class="section-label">Quem somos</span>
           <h2 class="section-title" id="sobre-titulo">
-            Especialistas em diligências <em>Banco Master</em>
+            Especialistas em serviços no <em>Banco Master</em>
           </h2>
           <span class="blue-line"></span>
 
           <p>
-            Somos uma <strong>unidade operacional especializada</strong> em diligências envolvendo o Banco Master — de ambos os lados do processo. Executamos com o nível de precisão que a complexidade de cada demanda exige.
+            Somos uma <strong>unidade operacional especializada</strong> em serviços no Banco Master — atuamos dos dois lados do processo. Executamos com o nível de precisão que a complexidade de cada caso exige.
           </p>
           <p>
-            Atuamos em processos que envolvem o Banco Master — <strong>penhoras, bloqueios, audiências, protocolos e execuções</strong> — com foco total em prazo, rastreabilidade e relatório completo.
+            Realizamos <strong>penhoras, bloqueios, audiências, protocolos, execuções, retirada de boletos, termos de quitação e liberação de margem</strong> — com foco total em prazo, rastreabilidade e relatório completo.
           </p>
           <p>
-            Nossa estrutura foi desenhada para absorber volume e lidar com <strong>urgências e demandas recorrentes</strong>, entregando consistência operacional em cada execução.
+            Nossa estrutura foi desenhada para absorver volume e lidar com <strong>urgências e demandas recorrentes</strong>, entregando consistência em cada execução.
           </p>
         </div>
 
@@ -857,34 +763,19 @@
           <div class="sobre-card reveal rd-3">
             <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
             <h4>Relatório Completo</h4>
-            <p>Cada diligência com documentação, evidências e comprovantes para o banco.</p>
+            <p>Cada serviço com documentação, evidências e comprovantes organizados.</p>
           </div>
           <div class="sobre-card reveal rd-4">
             <div class="sc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
             <h4>Especialização Banco Master</h4>
-            <p>Estrutura voltada para demandas que envolvem o Banco Master — de qualquer lado do processo.</p>
+            <p>Estrutura voltada para demandas do Banco Master — de qualquer lado do processo.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVIÇOS -->
-  <section id="servicos" aria-labelledby="servicos-titulo">
-    <div class="container">
-      <div class="servicos-header reveal">
-        <div>
-          <span class="section-label">O que executamos</span>
-          <h2 class="section-title" id="servicos-titulo">
-            Diligências <em>Banco Master</em> de ponta a ponta
-          </h2>
-        </div>
-        <p class="section-sub" style="margin-top:0">
-          Cobertura completa de demandas operacionais envolvendo o Banco Master — com precisão e rastreabilidade em cada execução.
-        </p>
-      </div>
-
-      <div class="servicos-grid">
+  <!-- SERVIÇOS REMOVIDO --><div class="servicos-grid" style="display:none">
 
         <article class="servico-card reveal rd-1" tabindex="0">
           <div class="srv-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
@@ -942,16 +833,7 @@
           <span class="srv-tag">Rastreável</span>
         </article>
 
-        <article class="servico-card reveal rd-3" tabindex="0">
-          <div class="srv-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-          <h3>Suporte Recorrente</h3>
-          <p>Atendimento contínuo para escritórios e clientes com alto volume de demandas mensais envolvendo o Banco Master.</p>
-          <span class="srv-tag">Contrato Dedicado</span>
-        </article>
-
       </div>
-    </div>
-  </section>
 
   <!-- DIFERENCIAIS -->
   <section id="diferenciais" aria-labelledby="dif-titulo">
@@ -961,7 +843,7 @@
           <span class="section-label">Diferenciais</span>
           <div class="dif-bignumber" aria-hidden="true">07</div>
           <h2 class="section-title" id="dif-titulo">
-            Por que escolher o <em>Rudy</em> para diligências Banco Master?
+            Por que escolher o <em>Rudy</em> para seus serviços no Banco Master?
           </h2>
           <span class="blue-line"></span>
           <p class="section-sub">
@@ -1039,7 +921,7 @@
           <div class="tl-dot-wrap" aria-hidden="true"><div class="tl-dot"><span class="tl-dot-n">01</span></div></div>
           <div class="tl-body">
             <span class="tl-badge">Entrada</span>
-            <h3>Solicitação da Diligência</h3>
+            <h3>Solicitação do Serviço</h3>
             <p>O cliente envia a demanda via WhatsApp com os dados do processo, prazo e instruções. Atendemos 24h para urgências.</p>
           </div>
         </div>
@@ -1058,7 +940,7 @@
           <div class="tl-body">
             <span class="tl-badge">Execução</span>
             <h3>Execução com Registro Total</h3>
-            <p>A diligência é realizada com registro em cada etapa — protocolos, carimbos, fotos e certidões. Nada acontece sem documentação.</p>
+            <p>O serviço é realizado com registro em cada etapa — protocolos, carimbos, fotos e certidões. Nada acontece sem documentação.</p>
           </div>
         </div>
 
@@ -1067,7 +949,7 @@
           <div class="tl-body">
             <span class="tl-badge">Tempo real</span>
             <h3>Atualização Proativa</h3>
-            <p>O cliente é comunicado em cada ponto crítico da diligência. Você não precisa perguntar — nós informamos antes que surja a dúvida.</p>
+            <p>O cliente é comunicado em cada ponto crítico do processo. Você não precisa perguntar — nós informamos antes que surja a dúvida.</p>
           </div>
         </div>
 
@@ -1099,7 +981,7 @@
         <article class="depo-card reveal rd-1">
           <div class="depo-stars" aria-label="5 estrelas"><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span></div>
           <div class="depo-q" aria-hidden="true">"</div>
-          <p class="depo-text">Trabalhamos com volume alto de processos envolvendo o Banco Master. O Rudy é o único correspondente que mantém consistência mesmo nos meses mais pesados — prazo, relatório e comunicação, sempre.</p>
+          <p class="depo-text">Trabalhamos com volume alto de processos do Banco Master. O Rudy é o único correspondente que mantém consistência mesmo nos meses mais pesados — prazo, relatório e comunicação, sempre.</p>
           <div class="depo-author">
             <div class="depo-info">
               <h5>Felipe Monteiro</h5>
@@ -1111,7 +993,7 @@
         <article class="depo-card reveal rd-2">
           <div class="depo-stars" aria-label="5 estrelas"><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span><span class="depo-star" aria-hidden="true">★</span></div>
           <div class="depo-q" aria-hidden="true">"</div>
-          <p class="depo-text">Precisávamos de alguém que entendesse o ritmo das nossas demandas envolvendo o Banco Master. O Rudy opera diferente — ele se adapta ao nosso processo, não o contrário. A comunicação é direta e os relatórios chegam sem a gente pedir.</p>
+          <p class="depo-text">Precisávamos de alguém que entendesse o ritmo das nossas demandas do Banco Master. O Rudy opera diferente — ele se adapta ao nosso processo, não o contrário. A comunicação é direta e os relatórios chegam sem a gente pedir.</p>
           <div class="depo-author">
             <div class="depo-info">
               <h5>Roberta Souza</h5>
@@ -1142,7 +1024,7 @@
         <span class="section-label">Vamos operar juntos</span>
         <div class="cta-orn" aria-hidden="true"></div>
         <h2 class="section-title" id="cta-titulo">
-          Tem diligências do <em>Banco Master</em> para executar?
+          Tem serviços no <em>Banco Master</em> para executar?
         </h2>
         <p class="section-sub">
           Envie a demanda agora. Analisamos, confirmamos e colocamos em execução — com rastreabilidade total e relatório garantido.
@@ -1165,14 +1047,13 @@
       <div class="footer-grid">
         <div>
           <div class="footer-logo">Rudy</div>
-          <p class="footer-desc">Unidade operacional especializada em diligências envolvendo o Banco Master. Execução precisa, rastreável e documentada em cada demanda.</p>
+          <p class="footer-desc">Unidade operacional especializada em serviços no Banco Master. Execução precisa, rastreável e documentada em cada demanda.</p>
         </div>
 
         <div class="footer-col">
           <h4>Navegação</h4>
           <ul class="footer-links">
             <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Serviços</a></li>
             <li><a href="#diferenciais">Diferenciais</a></li>
             <li><a href="#processo">Como Funciona</a></li>
             <li><a href="#depoimentos">Depoimentos</a></li>
@@ -1180,13 +1061,14 @@
         </div>
 
         <div class="footer-col">
-          <h4>Diligências</h4>
+          <h4>Serviços</h4>
           <ul class="footer-links">
-            <li><a href="#servicos">Audiências</a></li>
-            <li><a href="#servicos">Penhoras & SISBAJUD</a></li>
-            <li><a href="#servicos">Protocolos</a></li>
-            <li><a href="#servicos">Acompanhamento Processual</a></li>
-            <li><a href="#servicos">Suporte Recorrente</a></li>
+            <li><a href="#sobre">Audiências</a></li>
+            <li><a href="#sobre">Penhoras & SISBAJUD</a></li>
+            <li><a href="#sobre">Protocolos</a></li>
+            <li><a href="#sobre">Retirada de Boleto</a></li>
+            <li><a href="#sobre">Termo de Quitação</a></li>
+            <li><a href="#sobre">Liberação de Margem</a></li>
           </ul>
         </div>
 
@@ -1204,7 +1086,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-copy">© 2026 <span>Rudy</span> · Diligências Banco Master. Todos os direitos reservados.</p>
+        <p class="footer-copy">© 2026 <span>Rudy</span> · Serviços Banco Master. Todos os direitos reservados.</p>
         <div class="footer-btm-links">
           <a href="#">Privacidade</a>
           <a href="#">Termos de Uso</a>
