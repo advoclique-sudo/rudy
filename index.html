@@ -82,6 +82,8 @@
       width:100%; max-width:760px;
       margin:0 auto;
       padding:0 32px;
+      text-align:center;
+      display:flex; flex-direction:column; align-items:center;
     }
 
     /* ── LOGO BANCO MASTER ────────────────────────── */
@@ -103,16 +105,19 @@
       letter-spacing:-.01em;
       color:var(--white);
       margin-bottom:20px;
+      text-align:center;
     }
     h1 em { font-style:italic; color:var(--blue-lt); }
 
     /* ── SUBTÍTULO ────────────────────────────────── */
     .sub {
-      font-size:clamp(.95rem, 2vw, 1.08rem);
-      color:var(--white-dim);
+      font-size:clamp(1.05rem, 2.2vw, 1.22rem);
+      color:var(--white);
       line-height:1.75;
       max-width:580px;
       margin-bottom:32px;
+      font-weight:500;
+      text-align:center;
     }
 
     /* ── SERVIÇOS (PILLS) ─────────────────────────── */
@@ -250,6 +255,7 @@
       <!-- Serviços -->
       <div class="pills" role="list" aria-label="O que o Rudy faz">
         <span class="pill pill-highlight" role="listitem">Pegar Boleto</span>
+        <span class="pill pill-highlight" role="listitem">Cópia de Contrato</span>
         <span class="pill pill-highlight" role="listitem">Termo de Quitação</span>
         <span class="pill pill-highlight" role="listitem">Liberação de Margem</span>
       </div>
